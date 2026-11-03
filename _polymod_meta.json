@@ -1,0 +1,29 @@
+{
+  "mod_id": "_wiiFunkinV3",
+  "title": "Wii Funkin' V2",
+  "description": "VS Matt V2 Songs.",
+  "author": null,
+  "contributors": [],
+  "homepage": null,
+  "dependencies": [],
+  "type": "Content",
+  "mod_version": "1.0.0",
+  "api_version": "0.1.0",
+  "api_type": null,
+  "config": {
+    "restart": true,
+    "runsGlobally": false,
+    "color": [
+      214,
+      138,
+      66
+    ],
+    "iconFramerate": 10,
+    "mod_app_icon": "",
+    "mod_app_title": null,
+    "mod_discord_client_id": null,
+    "mod_discord_logo_key": null,
+    "mod_discord_logo_text": null,
+    "mod_redirect_states": {}
+  }
+}
