@@ -9551,7 +9551,7 @@
 		],
 		"player2": "matt",
 		"player3": null,
-		"splashSkin": "noteSplashes",
+		"splashSkin": null,
 		"song": "3hot",
 		"needsVoices": true,
 		"arrowSkin": "",

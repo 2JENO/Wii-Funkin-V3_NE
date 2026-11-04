@@ -10585,7 +10585,7 @@
 			}
 		],
 		"gfVersion": "nogf",
-		"splashSkin": "noteSplashes",
+		"splashSkin": null,
 		"song": "Funkadelic",
 		"validScore": true,
 		"stage": "basket-night",

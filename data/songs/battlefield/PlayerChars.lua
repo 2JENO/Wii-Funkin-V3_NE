@@ -238,6 +238,7 @@ function danceCharacters()
     for i = 0, #characterList-1 do 
         if curBeat % getProperty(characterList[i+1]..'.danceEveryNumBeats') == 0 and not getProperty(characterList[i+1]..'.stunned') and getProperty(characterList[i+1]..'.animation.curAnim') then 
             if getProperty(characterList[i+1]..'.animation.curAnim.name') == 'idle' then 
+                --playAnim(characterList[i+1], 'idle', true)
                 callMethod(characterList[i+1]..'.dance', {0})
             end
         end
@@ -263,7 +264,7 @@ function opponentNoteHit(id, noteData, ntype, sus)
         if string.find(ntype, getCharNoteType(characterList[i+1])) then 
             --runHaxeCode('game.variables["'..characterList[i+1]..'"].playAnim("'..singAnims[getSingAnim(noteData)]..'", true);')
 		    --runHaxeCode('game.variables["'..characterList[i+1]..'"].holdTimer = 0;')
-            playAnim(characterList[i+1], singAnims[getMultikeyNoteIndex(noteData)+1], true)
+            playAnim(characterList[i+1], singAnims[(noteData)+1], true)
             setProperty(characterList[i+1]..'.holdTimer', 0)
             lastOpponentHitCharacter = characterList[i+1]
             wasCharHit = true
@@ -273,7 +274,7 @@ end
 function goodNoteHit(id, noteData, ntype, su)
     for i = 0, #characterList-1 do 
         if string.find(ntype, getCharNoteType(characterList[i+1])) then 
-            playAnim(characterList[i+1], singAnims[getMultikeyNoteIndex(noteData)+1], true)
+            playAnim(characterList[i+1], singAnims[(noteData)+1], true)
             setProperty(characterList[i+1]..'.holdTimer', 0)
             lastHitCharacter = characterList[i+1]
         end

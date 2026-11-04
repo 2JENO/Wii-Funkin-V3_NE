@@ -175,7 +175,7 @@ function opponentNoteHit(id, noteData, ntype, sus)
         if string.find(ntype, getCharNoteType(characterList[i+1])) then 
             --runHaxeCode('game.variables["'..characterList[i+1]..'"].playAnim("'..singAnims[getSingAnim(noteData)]..'", true);')
 		    --runHaxeCode('game.variables["'..characterList[i+1]..'"].holdTimer = 0;')
-            playAnim(characterList[i+1], singAnims[getMultikeyNoteIndex(noteData)+1], true)
+            playAnim(characterList[i+1], singAnims[(noteData)+1], true)
             setProperty(characterList[i+1]..'.holdTimer', 0)
             lastOpponentHitCharacter = characterList[i+1]
             wasCharHit = true
@@ -184,7 +184,7 @@ function opponentNoteHit(id, noteData, ntype, sus)
 end
 function goodNoteHit(id, noteData, ntype, su)
     for i = 0, #characterList-1 do 
-        playAnim(characterList[i+1], singAnims[getMultikeyNoteIndex(noteData)+1], true)
+        playAnim(characterList[i+1], singAnims[(noteData)+1], true)
         setProperty(characterList[i+1]..'.holdTimer', 0)
         lastHitCharacter = characterList[i+1]
     end
